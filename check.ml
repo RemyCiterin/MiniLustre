@@ -282,11 +282,13 @@ let verify (table0 : BDD.global_table) (program1 : (BDD.bdd, Prims.int) program)
         let rec aux () = 
             let (err, t) = BDD.apply !table (fun x y -> x && not y) !state property_rest in 
             table := t;
+
+            print_string (bdd_to_string !state ^ "\n");
             
             if err.node <> BDD.Zero then false else begin 
             
                 let (state', table') = image !table [!state] program2 in 
-                table := table'; if !state.tag = state'.tag then true else aux ()
+                table := table'; if !state.tag = state'.tag then true else (state := state'; aux ())
 
             end
         in aux ()

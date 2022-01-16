@@ -48,11 +48,21 @@ let () =
         let l4string = lustre4string true f' in
         print_string ("\n" ^ l4string ^ "\n");
 
-        let var_name, _ = List.hd f'.obc_outputs in 
-        let var = Hashtbl.find str_to_int var_name in 
+        
+        let rec aux = function
+        | output :: rest -> begin 
+                let var_name, _ = output in 
+            let var = Hashtbl.find str_to_int var_name in 
 
-        print_bool (Check.verify t2 program1 program2 (Prims.of_int var));
-        print_string "\n";
+            
+            print_bool (Check.verify t2 program1 program2 (Prims.of_int var));
+            print_string "\n";
+            aux rest 
+        end
+        | [] -> ()
+        in 
+
+        aux f'.obc_outputs;
 
         assert false; 
 

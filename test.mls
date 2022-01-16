@@ -1,8 +1,50 @@
-node main(x : bool; z : bool) returns (y: bool)
-var a, b: bool
-let
-    a = true -> pre(x) && pre(z);
-    b = true -> pre(z && x);
+node TrafficLight( Button: bool )
+returns ( Red, Yellow, Green, Walk, DontWalk: bool )
 
-    y = a == b;
+var PhaseA, PhaseB, PrePhaseA, PrePhaseB : bool
+let
+  PrePhaseA = false -> pre(PhaseA);
+  PrePhaseB = false -> pre(PhaseB);
+  PhaseA    = if Button then
+               true
+             else if (!PrePhaseA || !PrePhaseB) && (PrePhaseB || PrePhaseA) then
+               !PrePhaseA
+             else
+               false;
+    
+  PhaseB    = if Button then
+               false
+             else if (!PrePhaseA || !PrePhaseB) && (PrePhaseB || PrePhaseA) then
+               PrePhaseA || PrePhaseB
+             else
+               false;
+
+  Green    = !PhaseA && !PhaseB;
+  Yellow   =  PhaseA && !PhaseB;
+  Red      =  PhaseB;
+
+  Walk     = false;
+  DontWalk = ! Walk;
+tel
+
+
+node main(Button : bool)
+returns (R1, R2, R3, R4, R5, R6, R7, R8, R9, R10: bool)
+
+var  CarsAllowed, Red, Yellow, Green, Walk, DontWalk : bool
+let
+  (Red, Yellow, Green, Walk, DontWalk) = TrafficLight(Button);
+
+  CarsAllowed = Green || Yellow;
+
+  R1 = ! (CarsAllowed && Walk);
+  R2 = ! (Red && Green);
+  R3 = Red || Yellow || Green;
+  R4 = Walk <= Red;
+  R5 = Walk ^ DontWalk;
+  R6 = true -> ! (Red && pre (Green));
+  R7 = true -> ! (Walk && pre (CarsAllowed));
+  R8 = true -> ! (CarsAllowed && pre (Walk));
+  R9 = true -> ! (Yellow && pre (Yellow));
+  R10 = true -> (pre (Red) && ! Red) <= Green;
 tel

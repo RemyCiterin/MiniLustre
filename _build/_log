@@ -65,7 +65,7 @@ ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o obc2lustre4
 ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o main.cmo main.ml
 + ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o main.cmo main.ml
 findlib: [WARNING] Interface FStar_Pervasives_Native.cmi occurs in several directories: fstar_out, /home/remy/.opam/4.07.0/lib/fstarlib
-File "main.ml", line 57, characters 8-20:
+File "main.ml", line 67, characters 8-20:
 Warning 21: this statement never returns (or has an unsound type.)
 # Target: fstar_out/Compare.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:fstar_out/Compare.cmx, file:fstar_out/Compare.ml, implem, native, ocaml, quiet, traverse }
 ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/Compare.cmx fstar_out/Compare.ml # cached
@@ -97,7 +97,7 @@ ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o obc2lustr
 ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o main.cmx main.ml
 + ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o main.cmx main.ml
 findlib: [WARNING] Interface FStar_Pervasives_Native.cmi occurs in several directories: fstar_out, /home/remy/.opam/4.07.0/lib/fstarlib
-File "main.ml", line 57, characters 8-20:
+File "main.ml", line 67, characters 8-20:
 Warning 21: this statement never returns (or has an unsound type.)
 # Target: main.native, tags: { package(fstarlib,batteries,unix), dont_link_with, extension:native, file:main.native, link, native, ocaml, program, quiet, traverse }
 ocamlfind ocamlopt -linkpkg -package fstarlib,batteries,unix -I fstar_out fstar_out/Compare.cmx fstar_out/FStar_Pervasives_Native.cmx fstar_out/BinTree.cmx fstar_out/AVL.cmx fstar_out/MapAVL.cmx fstar_out/BDD.cmx utils.cmx check.cmx parser.cmx lexer.cmx lustre2obc.cmx obc2lustre4.cmx main.cmx -o main.native
