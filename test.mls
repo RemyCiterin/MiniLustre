@@ -1,0 +1,8 @@
+node main(x : bool; z : bool) returns (y: bool)
+var a, b: bool
+let
+    a = true -> pre(x) && pre(z);
+    b = true -> pre(z && x);
+
+    y = a == b;
+tel

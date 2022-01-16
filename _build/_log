@@ -1,0 +1,106 @@
+### Starting build.
+# Target: main.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:main.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules main.ml > main.ml.depends
+# Target: check.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:check.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules check.ml > check.ml.depends # cached
+# Target: ast.mli.depends, tags: { package(fstarlib,batteries,unix), extension:mli, file:ast.mli, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules ast.mli > ast.mli.depends # cached
+# Target: ast.cmi, tags: { package(fstarlib,batteries,unix), byte, compile, extension:mli, file:ast.mli, interf, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o ast.cmi ast.mli # cached
+# Target: fstar_out/BDD.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:fstar_out/BDD.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules fstar_out/BDD.ml > fstar_out/BDD.ml.depends # cached
+# Target: fstar_out/BinTree.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:fstar_out/BinTree.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules fstar_out/BinTree.ml > fstar_out/BinTree.ml.depends # cached
+# Target: fstar_out/Compare.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:fstar_out/Compare.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules fstar_out/Compare.ml > fstar_out/Compare.ml.depends # cached
+# Target: fstar_out/Compare.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:fstar_out/Compare.cmo, file:fstar_out/Compare.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/Compare.cmo fstar_out/Compare.ml # cached
+# Target: fstar_out/FStar_Pervasives_Native.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:fstar_out/FStar_Pervasives_Native.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules fstar_out/FStar_Pervasives_Native.ml > fstar_out/FStar_Pervasives_Native.ml.depends # cached
+# Target: fstar_out/FStar_Pervasives_Native.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:fstar_out/FStar_Pervasives_Native.cmo, file:fstar_out/FStar_Pervasives_Native.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/FStar_Pervasives_Native.cmo fstar_out/FStar_Pervasives_Native.ml # cached
+# Target: fstar_out/BinTree.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:fstar_out/BinTree.cmo, file:fstar_out/BinTree.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/BinTree.cmo fstar_out/BinTree.ml # cached
+# Target: fstar_out/MapAVL.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:fstar_out/MapAVL.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules fstar_out/MapAVL.ml > fstar_out/MapAVL.ml.depends # cached
+# Target: fstar_out/AVL.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:fstar_out/AVL.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules fstar_out/AVL.ml > fstar_out/AVL.ml.depends # cached
+# Target: fstar_out/AVL.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:fstar_out/AVL.cmo, file:fstar_out/AVL.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/AVL.cmo fstar_out/AVL.ml # cached
+# Target: fstar_out/MapAVL.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:fstar_out/MapAVL.cmo, file:fstar_out/MapAVL.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/MapAVL.cmo fstar_out/MapAVL.ml # cached
+# Target: fstar_out/BDD.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:fstar_out/BDD.cmo, file:fstar_out/BDD.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/BDD.cmo fstar_out/BDD.ml # cached
+# Target: obc_ast.mli.depends, tags: { package(fstarlib,batteries,unix), extension:mli, file:obc_ast.mli, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules obc_ast.mli > obc_ast.mli.depends # cached
+# Target: obc_ast.cmi, tags: { package(fstarlib,batteries,unix), byte, compile, extension:mli, file:obc_ast.mli, interf, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o obc_ast.cmi obc_ast.mli # cached
+# Target: utils.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:utils.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules utils.ml > utils.ml.depends # cached
+# Target: utils.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:utils.cmo, file:utils.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o utils.cmo utils.ml # cached
+# Target: check.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:check.cmo, file:check.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o check.cmo check.ml # cached
+# Target: lexer.mll, tags: { package(fstarlib,batteries,unix), extension:mll, file:lexer.mll, lexer, ocaml, ocamllex, quiet, traverse }
+/home/remy/.opam/4.07.0/bin/ocamllex.opt -q lexer.mll # cached
+# Target: lexer.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:lexer.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules lexer.ml > lexer.ml.depends # cached
+# Target: parser.mly, tags: { package(fstarlib,batteries,unix), extension:mly, file:parser.mly, infer, ocaml, ocamlyacc, parser, quiet, traverse }
+/home/remy/.opam/4.07.0/bin/ocamlyacc parser.mly # cached
+# Target: parser.mli.depends, tags: { package(fstarlib,batteries,unix), extension:mli, file:parser.mli, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules parser.mli > parser.mli.depends # cached
+# Target: parser.cmi, tags: { package(fstarlib,batteries,unix), byte, compile, extension:mli, file:parser.mli, interf, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o parser.cmi parser.mli # cached
+# Target: lexer.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:lexer.cmo, file:lexer.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o lexer.cmo lexer.ml # cached
+# Target: lustre2obc.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:lustre2obc.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules lustre2obc.ml > lustre2obc.ml.depends # cached
+# Target: lustre2obc.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:lustre2obc.cmo, file:lustre2obc.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o lustre2obc.cmo lustre2obc.ml # cached
+# Target: obc2lustre4.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:obc2lustre4.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules obc2lustre4.ml > obc2lustre4.ml.depends # cached
+# Target: obc2lustre4.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:obc2lustre4.cmo, file:obc2lustre4.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o obc2lustre4.cmo obc2lustre4.ml # cached
+# Target: main.cmo, tags: { package(fstarlib,batteries,unix), byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet, traverse }
+ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o main.cmo main.ml
++ ocamlfind ocamlc -c -package fstarlib,batteries,unix -I fstar_out -o main.cmo main.ml
+findlib: [WARNING] Interface FStar_Pervasives_Native.cmi occurs in several directories: fstar_out, /home/remy/.opam/4.07.0/lib/fstarlib
+File "main.ml", line 57, characters 8-20:
+Warning 21: this statement never returns (or has an unsound type.)
+# Target: fstar_out/Compare.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:fstar_out/Compare.cmx, file:fstar_out/Compare.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/Compare.cmx fstar_out/Compare.ml # cached
+# Target: fstar_out/FStar_Pervasives_Native.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:fstar_out/FStar_Pervasives_Native.cmx, file:fstar_out/FStar_Pervasives_Native.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/FStar_Pervasives_Native.cmx fstar_out/FStar_Pervasives_Native.ml # cached
+# Target: fstar_out/BinTree.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:fstar_out/BinTree.cmx, file:fstar_out/BinTree.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/BinTree.cmx fstar_out/BinTree.ml # cached
+# Target: fstar_out/AVL.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:fstar_out/AVL.cmx, file:fstar_out/AVL.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/AVL.cmx fstar_out/AVL.ml # cached
+# Target: fstar_out/MapAVL.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:fstar_out/MapAVL.cmx, file:fstar_out/MapAVL.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/MapAVL.cmx fstar_out/MapAVL.ml # cached
+# Target: fstar_out/BDD.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:fstar_out/BDD.cmx, file:fstar_out/BDD.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o fstar_out/BDD.cmx fstar_out/BDD.ml # cached
+# Target: utils.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:utils.cmx, file:utils.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o utils.cmx utils.ml # cached
+# Target: check.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:check.cmx, file:check.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o check.cmx check.ml # cached
+# Target: parser.ml.depends, tags: { package(fstarlib,batteries,unix), extension:ml, file:parser.ml, ocaml, ocamldep, quiet, traverse }
+ocamlfind ocamldep -package fstarlib,batteries,unix -modules parser.ml > parser.ml.depends # cached
+# Target: parser.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:parser.cmx, file:parser.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o parser.cmx parser.ml # cached
+# Target: lexer.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:lexer.cmx, file:lexer.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o lexer.cmx lexer.ml # cached
+# Target: lustre2obc.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:lustre2obc.cmx, file:lustre2obc.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o lustre2obc.cmx lustre2obc.ml # cached
+# Target: obc2lustre4.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:obc2lustre4.cmx, file:obc2lustre4.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o obc2lustre4.cmx obc2lustre4.ml # cached
+# Target: main.cmx, tags: { package(fstarlib,batteries,unix), compile, extension:cmx, extension:ml, file:main.cmx, file:main.ml, implem, native, ocaml, quiet, traverse }
+ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o main.cmx main.ml
++ ocamlfind ocamlopt -c -package fstarlib,batteries,unix -I fstar_out -o main.cmx main.ml
+findlib: [WARNING] Interface FStar_Pervasives_Native.cmi occurs in several directories: fstar_out, /home/remy/.opam/4.07.0/lib/fstarlib
+File "main.ml", line 57, characters 8-20:
+Warning 21: this statement never returns (or has an unsound type.)
+# Target: main.native, tags: { package(fstarlib,batteries,unix), dont_link_with, extension:native, file:main.native, link, native, ocaml, program, quiet, traverse }
+ocamlfind ocamlopt -linkpkg -package fstarlib,batteries,unix -I fstar_out fstar_out/Compare.cmx fstar_out/FStar_Pervasives_Native.cmx fstar_out/BinTree.cmx fstar_out/AVL.cmx fstar_out/MapAVL.cmx fstar_out/BDD.cmx utils.cmx check.cmx parser.cmx lexer.cmx lustre2obc.cmx obc2lustre4.cmx main.cmx -o main.native
++ ocamlfind ocamlopt -linkpkg -package fstarlib,batteries,unix -I fstar_out fstar_out/Compare.cmx fstar_out/FStar_Pervasives_Native.cmx fstar_out/BinTree.cmx fstar_out/AVL.cmx fstar_out/MapAVL.cmx fstar_out/BDD.cmx utils.cmx check.cmx parser.cmx lexer.cmx lustre2obc.cmx obc2lustre4.cmx main.cmx -o main.native
+findlib: [WARNING] Interface FStar_Pervasives_Native.cmi occurs in several directories: fstar_out, /home/remy/.opam/4.07.0/lib/fstarlib
+# Compilation successful.
